@@ -14,9 +14,5 @@ public class LearningApplication {
 		System.out.println(myFirstClass.sayHello());
 	}
 
-	@Bean
-	public FirstClass myfirstClass() {
-		return new FirstClass();
-	}
 
 }
