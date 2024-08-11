@@ -8,7 +8,7 @@ public class ApplicationConfig {
 
     @Bean("firstClassBean")
     public FirstClass myfirstClass() {
-        return new FirstClass();
+        return new FirstClass("First bean :)");
     }
 
 }
