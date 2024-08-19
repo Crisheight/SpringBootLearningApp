@@ -1,22 +1,26 @@
 package com.crosa.learning;
 
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 @Configuration
 public class ApplicationConfig {
 
     @Bean
-    @Qualifier("bean1")
     public FirstClass myFirstBean() {
         return new FirstClass("First bean :)");
     }
 
     @Bean
-    @Qualifier("bean2")
-    public FirstClass mySecondClass() {
+    public FirstClass mySecondBean() {
         return new FirstClass("Second bean :)");
+    }
+
+    @Bean
+    @Primary
+    public FirstClass myThirdBean() {
+        return new FirstClass("Third bean :)");
     }
 
 }
