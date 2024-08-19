@@ -8,10 +8,8 @@ public class FirstService {
 
     private final FirstClass firstClass;
 
-    public FirstService(
-            @Qualifier("bean2") FirstClass firstBean
-    ) {
-        this.firstClass = firstBean;
+    public FirstService(FirstClass firstClass) {
+        this.firstClass = firstClass;
     }
 
     public String tellAStory() {
