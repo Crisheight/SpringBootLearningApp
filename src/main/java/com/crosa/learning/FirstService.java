@@ -10,9 +10,8 @@ public class FirstService {
     private FirstClass firstClass;
 
     @Autowired
-    public void injectDependencies(@Qualifier("bean3") FirstClass firstClass) {
+    public void setFirstClass(@Qualifier("mySecondBean") FirstClass firstClass) {
         this.firstClass = firstClass;
-
     }
 
     public String tellAStory() {
