@@ -11,6 +11,8 @@ public class LearningApplication {
 
 		FirstService myFirstService = ctx.getBean(FirstService.class);
 		System.out.println(myFirstService.tellAStory());
+		System.out.println(myFirstService.getJavaVersion());
+
 	}
 
 
