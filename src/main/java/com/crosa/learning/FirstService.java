@@ -20,9 +20,11 @@ public class FirstService {
         return "the dependency is injected and says: " + firstClass.sayHello();
     }
 
+    public String getJavaVersion() { return environment.getProperty("java.version"); }
     public String getOsName() {
         return environment.getProperty("os.name");
     }
+    public String readProperty() {return environment.getProperty("my.custom.property");}
 
     @Autowired
     public void setEnvironment(Environment environment) {
