@@ -14,6 +14,8 @@ public class LearningApplication {
 		System.out.println(myFirstService.getCustomProperty());
 		System.out.println(myFirstService.getCustomPropertyInt());
 		System.out.println(myFirstService.getCustomPropertyFromFile());
+		System.out.println(myFirstService.getCustomPropertyFromFileValTwo());
+
 
 	}
 
