@@ -11,9 +11,9 @@ public class FirstService {
 
     private final FirstClass firstClass;
 
-    @Value("Hello all")
+    @Value("${my.custom.property}")
     private String customProperty;
-    @Value("123")
+    @Value("${my.custom.property.int}")
     private Integer customPropertyInt;
     @Value("${my.prop}")
     private String customPropertyFromFile;
