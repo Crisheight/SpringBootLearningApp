@@ -11,6 +11,9 @@ public class LearningApplication {
 
 		FirstService myFirstService = ctx.getBean(FirstService.class);
 		System.out.println(myFirstService.tellAStory());
+		System.out.println(myFirstService.getCustomProperty());
+		System.out.println(myFirstService.getCustomPropertyInt());
+		System.out.println(myFirstService.getCustomPropertyFromFile());
 
 	}
 
