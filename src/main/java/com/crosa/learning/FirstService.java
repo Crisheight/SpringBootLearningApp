@@ -3,20 +3,30 @@ package com.crosa.learning;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.PropertySources;
 import org.springframework.stereotype.Service;
 
 @Service
-@PropertySource("classpath:custom.properties")
+@PropertySources({
+        @PropertySource("classpath:custom.properties"),
+        @PropertySource("classpath:custom-file-2.properties")
+})
 public class FirstService {
 
     private final FirstClass firstClass;
 
     @Value("${my.custom.property}")
     private String customProperty;
+
     @Value("${my.custom.property.int}")
     private Integer customPropertyInt;
+
     @Value("${my.prop}")
     private String customPropertyFromFile;
+
+    @Value("${my.prop.val.two}")
+    private String customPropertyFromFileValTwo;
+
 
 
     public FirstService(
@@ -41,5 +51,9 @@ public class FirstService {
 
     public Integer getCustomPropertyInt() {
         return customPropertyInt;
+    }
+
+    public String getCustomPropertyFromFileValTwo() {
+        return customPropertyFromFileValTwo;
     }
 }
