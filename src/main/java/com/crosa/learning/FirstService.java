@@ -1,12 +1,21 @@
 package com.crosa.learning;
 
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 @Service
 public class FirstService {
 
     private final FirstClass firstClass;
+
+    @Value("Hello all")
+    private String customProperty;
+    @Value("123")
+    private Integer customPropertyInt;
+    @Value("${my.prop}")
+    private String customPropertyFromFile;
+
 
     public FirstService(
             @Qualifier("bean3") FirstClass firstClass
@@ -20,4 +29,15 @@ public class FirstService {
     }
 
 
+    public String getCustomPropertyFromFile() {
+        return customPropertyFromFile;
+    }
+
+    public String getCustomProperty() {
+        return customProperty;
+    }
+
+    public Integer getCustomPropertyInt() {
+        return customPropertyInt;
+    }
 }
