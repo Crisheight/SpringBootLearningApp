@@ -5,16 +5,15 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
 @Configuration
+@Profile("dev")
 public class ApplicationConfig {
 
     @Bean("bean1")
-    @Profile("dev")
     public FirstClass myFirstBean() {
         return new FirstClass("First bean :)");
     }
 
     @Bean("bean2")
-    @Profile("test")
     public FirstClass mySecondBean() {
         return new FirstClass("Second bean :)");
     }
