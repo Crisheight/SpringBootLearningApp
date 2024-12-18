@@ -3,11 +3,15 @@ package com.crosa.learning;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.util.Collections;
+
 @SpringBootApplication
 public class LearningApplication {
 
 	public static void main(String[] args) {
-		var ctx = SpringApplication.run(LearningApplication.class, args);
+		var app = new SpringApplication(LearningApplication.class);
+		app.setDefaultProperties(Collections.singletonMap("spring.profiles.active", "dev"));
+		var ctx = app.run(args);
 
 		FirstService myFirstService = ctx.getBean(FirstService.class);
 		System.out.println(myFirstService.tellAStory());
