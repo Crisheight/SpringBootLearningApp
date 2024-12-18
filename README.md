@@ -1,6 +1,6 @@
-This project is about learning to use SpringBoot and learning the annotations and opinionated style.
+**This project is about learning to use SpringBoot and learning the annotations and opinionated style.**
 
-Some of the things I have learned include:
+<H1>SPRING BEANS & DEPENDENCY INJECTION</H1>
 
 * What is a bean
 * How to make a project a springboot project
@@ -11,3 +11,12 @@ Some of the things I have learned include:
 <img width="539" alt="Screenshot 2024-12-16 at 4 15 31 PM" src="https://github.com/user-attachments/assets/9723f819-f7ad-4d73-b936-ff2284ad160e" />
 <img width="801" alt="Screenshot 2024-12-16 at 4 15 22 PM" src="https://github.com/user-attachments/assets/4e26c93d-be49-4c18-9d79-d248cf73eaa8" />
 
+<H1>SPRING PROFILES</H1>
+
+* Allow us to have profile-specific beans for different environments
+* ex: a bean that prints useful stuff on dev profile would not be included in production
+* Ability to use a small and quick database in dev vs a full database in production
+
+<img width="1232" alt="Screenshot 2024-12-17 at 11 00 54 PM" src="https://github.com/user-attachments/assets/cc82da8b-10e7-48a4-aeb8-b6cfd143c7e2" />
+<img width="786" alt="Screenshot 2024-12-17 at 11 00 31 PM" src="https://github.com/user-attachments/assets/f1e2c9cc-c723-45e4-84e7-b370a278f58f" />
+<img width="727" alt="Screenshot 2024-12-17 at 11 00 42 PM" src="https://github.com/user-attachments/assets/05a12a5a-cc09-45fa-a3de-4a83f8e163db" />
