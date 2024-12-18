@@ -18,6 +18,7 @@
 * Ability to use a small and quick database in dev vs a full database in production
 * Explicitly setting which profile to use in application.properties
 * Separate the default spring application constructor (main.class, arg) - allows us to declare and use spring profiles in a map before calling .run(args) 
+* Profiles can be set at class or method level which can affect how beans are registered (class or method) 
 
 <img width="1232" alt="Screenshot 2024-12-17 at 11 00 54 PM" src="https://github.com/user-attachments/assets/cc82da8b-10e7-48a4-aeb8-b6cfd143c7e2" />
 <img width="786" alt="Screenshot 2024-12-17 at 11 00 31 PM" src="https://github.com/user-attachments/assets/f1e2c9cc-c723-45e4-84e7-b370a278f58f" />
