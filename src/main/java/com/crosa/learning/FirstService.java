@@ -30,7 +30,7 @@ public class FirstService {
 
 
     public FirstService(
-            @Qualifier("bean3") FirstClass firstClass
+            @Qualifier("bean1") FirstClass firstClass
     ) {
         this.firstClass = firstClass;
     }
