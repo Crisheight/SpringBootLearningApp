@@ -26,3 +26,12 @@
 <img width="416" alt="Screenshot 2024-12-18 at 12 14 54 AM" src="https://github.com/user-attachments/assets/90572af3-b2bc-4ca9-802d-c1f171e54225" />
 <img alt="Screenshot 2024-12-18 150554" src="https://github.com/user-attachments/assets/4b29ef85-f430-4fb6-badb-96cb5df6a018" />
 <img alt="Screenshot 2024-12-18 152959" src="https://github.com/user-attachments/assets/e21243b3-1764-4670-b50a-d75498e0da51" />
+
+<H1>HTTP METHODS</H1>
+* GET POST PUT DELETE PATCH OPTIONS HEAD
+* 1XX 2XX 3XX 4XX 5XX -> Informational, Success, Redirection, Client Error, Server Error
+* 200 OK, 201 Created, 204 No Content, 
+* 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 405 Method Not Allowed, 
+* 500 Internal Server Error
+
+<H1>SPRING REST</H1>
