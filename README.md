@@ -28,6 +28,7 @@
 <img alt="Screenshot 2024-12-18 152959" src="https://github.com/user-attachments/assets/e21243b3-1764-4670-b50a-d75498e0da51" />
 
 <H1>HTTP METHODS</H1>
+
 * GET POST PUT DELETE PATCH OPTIONS HEAD
 * 1XX 2XX 3XX 4XX 5XX -> Informational, Success, Redirection, Client Error, Server Error
 * 200 OK, 201 Created, 204 No Content, 
