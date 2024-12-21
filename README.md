@@ -33,6 +33,6 @@
 * 1XX 2XX 3XX 4XX 5XX -> Informational, Success, Redirection, Client Error, Server Error
 * 200 OK, 201 Created, 204 No Content, 
 * 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 405 Method Not Allowed, 
-* 500 Internal Server Error
+* 500 Internal Server Error, 503 Service Unavailable
 
 <H1>SPRING REST</H1>
