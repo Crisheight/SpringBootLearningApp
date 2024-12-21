@@ -42,3 +42,8 @@
 * Renamed main application to ExampleApplication 
 
 <h1>SPRING REST</h1>
+
+* Use RestController annotation (combines @Controller and @ResponseBody) to prep the class
+* Use annotations over methods to send requests ex: @GetMapping for GET requests
+* Importance of using endpoints & naming conventions
+* Using @ResponseStatus to change the status code
