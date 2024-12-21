@@ -1,6 +1,6 @@
 **This project is about learning to use SpringBoot and learning the annotations and opinionated style.**
 
-<H1>SPRING BEANS & DEPENDENCY INJECTION</H1>
+<h1>SPRING BEANS & DEPENDENCY INJECTION</h1>
 
 * What is a bean
 * How to make a project a springboot project
@@ -11,7 +11,7 @@
 <img width="539" alt="Screenshot 2024-12-16 at 4 15 31 PM" src="https://github.com/user-attachments/assets/9723f819-f7ad-4d73-b936-ff2284ad160e" />
 <img width="801" alt="Screenshot 2024-12-16 at 4 15 22 PM" src="https://github.com/user-attachments/assets/4e26c93d-be49-4c18-9d79-d248cf73eaa8" />
 
-<H1>SPRING PROFILES</H1>
+<h1>SPRING PROFILES</h1>
 
 * Allow us to have profile-specific beans for different environments
 * ex: a bean that prints useful stuff on dev profile would not be included in production
@@ -27,7 +27,7 @@
 <img alt="Screenshot 2024-12-18 150554" src="https://github.com/user-attachments/assets/4b29ef85-f430-4fb6-badb-96cb5df6a018" />
 <img alt="Screenshot 2024-12-18 152959" src="https://github.com/user-attachments/assets/e21243b3-1764-4670-b50a-d75498e0da51" />
 
-<H1>HTTP METHODS</H1>
+<h1>HTTP METHODS</h1>
 
 * GET POST PUT DELETE PATCH OPTIONS HEAD
 * 1XX 2XX 3XX 4XX 5XX -> Informational, Success, Redirection, Client Error, Server Error
@@ -35,4 +35,10 @@
 * 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 405 Method Not Allowed, 
 * 500 Internal Server Error, 503 Service Unavailable
 
-<H1>SPRING REST</H1>
+<h1>CODE RESET</h1>
+
+* Files and code removed
+* Preparation for building out Spring REST 
+* Renamed main application to ExampleApplication 
+
+<h1>SPRING REST</h1>
