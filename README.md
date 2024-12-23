@@ -62,7 +62,7 @@
 <img alt="Screenshot 2024-12-21 135920" src="https://github.com/user-attachments/assets/e5ddcf25-75b6-43a7-8044-c383af565f4a" />
 <img alt="Screenshot 2024-12-21 135239" src="https://github.com/user-attachments/assets/89829cf8-efc5-4573-8e93-2076a21b999e" />
 
-<h2>Using Paths with Get Mapping</h2>
+<h2>Creating Endpoints</h2>
 <p>Similar to how we can name Spring Bean annotations, we can provide paths for the Get request to map to. This is good practice.</p>
 <p>With the two methods having different paths, we can specify different status codes as well.</p>
 
