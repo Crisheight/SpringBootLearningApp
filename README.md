@@ -47,3 +47,26 @@
 * Use annotations over methods to send requests ex: @GetMapping for GET requests
 * Importance of using endpoints & naming conventions
 * Using @ResponseStatus to change the status code
+
+<h2>HTTP Status Implementation</h2>
+<p>We can see how Http status is implemented. In this case it gives us commands that correlate to HTTP status codes.</p>
+
+<img alt="Screenshot 2024-12-21 140335" src="https://github.com/user-attachments/assets/844eef03-84a7-4166-bd30-9f720f7de411" />
+<img alt="Screenshot 2024-12-21 140335" src="https://github.com/user-attachments/assets/a9e291e9-1eed-4341-ac40-5710f0f6cb9f" />
+
+<h2>REST Controller Class</h2>
+<p>Annotate the class as a rest controller and implement a method</p>
+<p>During startup we can see Spring use Tomcat for the server. It reports the port it's opened on and the context path.</p>
+
+<img alt="Screenshot 2024-12-21 135233" src="https://github.com/user-attachments/assets/bfbe7649-6057-4e23-9eda-20e620166cdb" />
+<img alt="Screenshot 2024-12-21 135920" src="https://github.com/user-attachments/assets/e5ddcf25-75b6-43a7-8044-c383af565f4a" />
+<img alt="Screenshot 2024-12-21 135239" src="https://github.com/user-attachments/assets/89829cf8-efc5-4573-8e93-2076a21b999e" />
+
+<h2>Using Paths with Get Mapping</h2>
+<p>Similar to how we can name Spring Bean annotations, we can provide paths for the Get request to map to. This is good practice.</p>
+<p>With the two methods having different paths, we can specify different status codes as well.</p>
+
+<img width="650" alt="Screenshot 2024-12-22 at 8 32 14 PM" src="https://github.com/user-attachments/assets/84451525-3c8f-4481-a7a5-27fced280478" />
+<img alt="Screenshot 2024-12-21 135645" src="https://github.com/user-attachments/assets/cf794457-0b95-4f1d-b138-a938c837091a" />
+<img alt="Screenshot 2024-12-21 140024" src="https://github.com/user-attachments/assets/7d10adb2-d88b-4919-a5bb-6573b1a2e208" />
+<img alt="Screenshot 2024-12-21 140436" src="https://github.com/user-attachments/assets/329ec307-0bf2-48f2-b290-495f540ab28a" />
