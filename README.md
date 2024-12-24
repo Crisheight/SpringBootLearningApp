@@ -78,3 +78,7 @@
 <p>Unlike GET requests, POST requests cannot be reached by hitting an endpoint on the browser</p>
 <p>POST data is sent in the body of the HTTP Request itself, not in the URL.</p>
 <p>POST data is designed to send data to the server to create or update a resource</p>
+
+<img width="648" alt="Screenshot 2024-12-23 at 11 04 38 PM" src="https://github.com/user-attachments/assets/3bf710c7-64c3-4423-b08b-57be202e341e" />
+<img width="554" alt="Screenshot 2024-12-23 at 11 06 03 PM" src="https://github.com/user-attachments/assets/e49d6e49-f401-4a62-9920-9e9b5b40831e" />
+
