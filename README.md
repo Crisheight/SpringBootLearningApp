@@ -62,11 +62,19 @@
 <img alt="Screenshot 2024-12-21 135920" src="https://github.com/user-attachments/assets/e5ddcf25-75b6-43a7-8044-c383af565f4a" />
 <img alt="Screenshot 2024-12-21 135239" src="https://github.com/user-attachments/assets/89829cf8-efc5-4573-8e93-2076a21b999e" />
 
-<h2>Creating Endpoints</h2>
+<h2>GET Requests</h2>
 <p>Similar to how we can name Spring Bean annotations, we can provide paths for the Get request to map to. This is good practice.</p>
 <p>With the two methods having different paths, we can specify different status codes as well.</p>
+<p>The browser address bar essentially sends a GET request when you enter a URL and press enter.</p>
+<p>A GET request is designed to retrieve a resource.</p>
 
 <img width="650" alt="Screenshot 2024-12-22 at 8 32 14 PM" src="https://github.com/user-attachments/assets/84451525-3c8f-4481-a7a5-27fced280478" />
 <img alt="Screenshot 2024-12-21 135645" src="https://github.com/user-attachments/assets/cf794457-0b95-4f1d-b138-a938c837091a" />
 <img alt="Screenshot 2024-12-21 140024" src="https://github.com/user-attachments/assets/7d10adb2-d88b-4919-a5bb-6573b1a2e208" />
 <img alt="Screenshot 2024-12-21 140436" src="https://github.com/user-attachments/assets/329ec307-0bf2-48f2-b290-495f540ab28a" />
+
+<h2>POST Requests</h2>
+<p>We can easily use an annotation to setup a POST request. </p>
+<p>Unlike GET requests, POST requests cannot be reached by hitting an endpoint on the browser</p>
+<p>POST data is sent in the body of the HTTP Request itself, not in the URL.</p>
+<p>POST data is designed to send data to the server to create or update a resource</p>
