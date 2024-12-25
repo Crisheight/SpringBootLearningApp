@@ -82,3 +82,10 @@
 <img width="648" alt="Screenshot 2024-12-23 at 11 04 38 PM" src="https://github.com/user-attachments/assets/3bf710c7-64c3-4423-b08b-57be202e341e" />
 <img width="554" alt="Screenshot 2024-12-23 at 11 06 03 PM" src="https://github.com/user-attachments/assets/e49d6e49-f401-4a62-9920-9e9b5b40831e" />
 
+<h2>Postman or cURL</h2>
+<p>Postman is an application that makes it easy to generate REST requests using a GUI</p>
+<p>Alternatively, cURL is the CLI method to creating REST requests. Powerful in it's own way.</p>
+
+<p>Here I make a GET request to the greetings endpoint. I receive a response from the server.</p>
+<img width="379" alt="Screenshot 2024-12-25 at 3 59 59 PM" src="https://github.com/user-attachments/assets/82a68f47-8101-4460-ae19-d28656635ea9" />
+
