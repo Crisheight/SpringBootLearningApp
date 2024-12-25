@@ -4,7 +4,7 @@
 
 * What is a bean
 * How to make a project a springboot project
-* different dependency injection in Spring, such as the preferred constructor injection, but also setter injection and field injection.
+* different dependency injection in Spring, such as the preferred constructor injection, but also setter injection and field injection
 
 <img width="705" alt="Screenshot 2024-12-16 at 4 15 42 PM" src="https://github.com/user-attachments/assets/d5353cea-08e1-4846-8be5-845609e15f7f" />
 <img width="705" alt="Screenshot 2024-12-16 at 4 15 42 PM" src="https://github.com/user-attachments/assets/9305a613-ba32-487a-ae3b-b05321adb423" />
@@ -55,7 +55,7 @@
 <img alt="Screenshot 2024-12-21 140335" src="https://github.com/user-attachments/assets/a9e291e9-1eed-4341-ac40-5710f0f6cb9f" />
 
 <h2>REST Controller Class</h2>
-<p>Annotate the class as a rest controller and implement a method</p>
+<p>Annotate the class as a rest controller and implement a method.</p>
 <p>During startup we can see Spring use Tomcat for the server. It reports the port it's opened on and the context path.</p>
 
 <img alt="Screenshot 2024-12-21 135233" src="https://github.com/user-attachments/assets/bfbe7649-6057-4e23-9eda-20e620166cdb" />
@@ -75,16 +75,16 @@
 
 <h2>POST Requests</h2>
 <p>We can easily use an annotation to setup a POST request. </p>
-<p>Unlike GET requests, POST requests cannot be reached by hitting an endpoint on the browser</p>
+<p>Unlike GET requests, POST requests cannot be reached by hitting an endpoint on the browser.</p>
 <p>POST data is sent in the body of the HTTP Request itself, not in the URL.</p>
-<p>POST data is designed to send data to the server to create or update a resource</p>
+<p>POST data is designed to send data to the server to create or update a resource.</p>
 
 <img width="648" alt="Screenshot 2024-12-23 at 11 04 38 PM" src="https://github.com/user-attachments/assets/3bf710c7-64c3-4423-b08b-57be202e341e" />
 <img width="554" alt="Screenshot 2024-12-23 at 11 06 03 PM" src="https://github.com/user-attachments/assets/e49d6e49-f401-4a62-9920-9e9b5b40831e" />
 
 <h2>Postman or cURL</h2>
-<p>Postman is an application that makes it easy to generate REST requests using a GUI</p>
-<p>Alternatively, cURL is the CLI method to creating REST requests. Powerful in it's own way.</p>
+<p>Postman is an application that makes it easy to generate REST requests using a GUI.</p>
+<p>Alternatively, cURL is the CLI method to creating REST requests. Powerful in its own way.</p>
 
 <p>Here I make a GET request to the greetings endpoint. I receive a response from the server.</p>
 <img width="379" alt="Screenshot 2024-12-25 at 3 59 59 PM" src="https://github.com/user-attachments/assets/82a68f47-8101-4460-ae19-d28656635ea9" />
