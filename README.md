@@ -82,7 +82,7 @@
 <img width="648" alt="Screenshot 2024-12-23 at 11 04 38 PM" src="https://github.com/user-attachments/assets/3bf710c7-64c3-4423-b08b-57be202e341e" />
 <img width="554" alt="Screenshot 2024-12-23 at 11 06 03 PM" src="https://github.com/user-attachments/assets/e49d6e49-f401-4a62-9920-9e9b5b40831e" />
 
-<h2>Postman or curl</h2>
+<h2>Using Postman or Curl to Make Requests</h2>
 <p>Postman is an application that makes it easy to generate REST requests using a GUI.</p>
 <p>Alternatively, curl is the CLI method to creating REST requests. Powerful in its own way.</p>
 
