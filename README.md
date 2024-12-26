@@ -82,10 +82,28 @@
 <img width="648" alt="Screenshot 2024-12-23 at 11 04 38 PM" src="https://github.com/user-attachments/assets/3bf710c7-64c3-4423-b08b-57be202e341e" />
 <img width="554" alt="Screenshot 2024-12-23 at 11 06 03 PM" src="https://github.com/user-attachments/assets/e49d6e49-f401-4a62-9920-9e9b5b40831e" />
 
-<h2>Postman or cURL</h2>
+<h2>Postman or curl</h2>
 <p>Postman is an application that makes it easy to generate REST requests using a GUI.</p>
-<p>Alternatively, cURL is the CLI method to creating REST requests. Powerful in its own way.</p>
+<p>Alternatively, curl is the CLI method to creating REST requests. Powerful in its own way.</p>
 
 <p>Here I make a GET request to the greetings endpoint. I receive a response from the server.</p>
 <img width="379" alt="Screenshot 2024-12-25 at 3 59 59 PM" src="https://github.com/user-attachments/assets/82a68f47-8101-4460-ae19-d28656635ea9" />
+
+<p>When making a POST request, the request goes through but Spring is not correctly translating the message.</p>
+<img width="766" alt="Screenshot 2024-12-25 at 9 08 11 PM" src="https://github.com/user-attachments/assets/2dfa1dcf-769a-485c-9482-9c4d18104305" />
+
+<p>We can look at the code by adding a breakpoint and using the debugger mode to see if there are issues.</p>
+<img width="746" alt="Screenshot 2024-12-25 at 9 08 34 PM" src="https://github.com/user-attachments/assets/59263a4b-5eba-4e3c-a7b1-1f58fd461d69" />
+<img width="627" alt="Screenshot 2024-12-25 at 9 08 47 PM" src="https://github.com/user-attachments/assets/663bdae6-776d-465b-9ca4-15fa630105f7" />
+
+<p>The program is not inherently incorrect, it is that Spring framework expects the body to be annotated in order for it to translate the request.</p>
+<p>We can annotate the parameter field so that Spring expects a response body.</p>
+<img width="543" alt="Screenshot 2024-12-25 at 9 25 51 PM" src="https://github.com/user-attachments/assets/8006b0e7-41f5-4171-94e8-65d8f3f6b7db" />
+
+<p>Now, running the request with raw data is successful.</p>
+<img width="479" alt="Screenshot 2024-12-25 at 9 13 37 PM" src="https://github.com/user-attachments/assets/c9461732-d42a-48e1-a56a-dda2f04f13e6" />
+
+<p>We can also send the response body as JSON, and it works.</p>
+<img width="969" alt="Screenshot 2024-12-25 at 9 20 28 PM" src="https://github.com/user-attachments/assets/07d1a1d8-07ee-4caa-8d55-3532b8834dc3" />
+
 
