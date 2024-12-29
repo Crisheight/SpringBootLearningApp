@@ -106,4 +106,13 @@
 <p>We can also send the response body as JSON, and it works.</p>
 <img width="969" alt="Screenshot 2024-12-25 at 9 20 28 PM" src="https://github.com/user-attachments/assets/07d1a1d8-07ee-4caa-8d55-3532b8834dc3" />
 
+<p>Creating a new endpoint that returns a different type is simple. In this case we return the string representation of an order object.</p>
+<img width="570" alt="Screenshot 2024-12-28 at 7 30 04 PM" src="https://github.com/user-attachments/assets/84a2f4b9-fb8f-42ea-90f8-d665b8ed397d" />
+<img width="339" alt="Screenshot 2024-12-28 at 7 30 18 PM" src="https://github.com/user-attachments/assets/bbfb56e1-8d69-43b9-b25d-2fe8e3b18e03" />
+<p>We can also escape in the terminal with "\" , which allows the formatting to be spaced out and cleaner.</p>
+<img width="571" alt="Screenshot 2024-12-28 at 7 29 52 PM" src="https://github.com/user-attachments/assets/aeee5668-110e-457d-a0a8-0c0c261425f3" />
+
+<p>By default when you call toString() method on an object in Java, it returns the object reference - a hash code. Of course, we can choose to override the default toString method if we want a different result.</p>
+
+
 
