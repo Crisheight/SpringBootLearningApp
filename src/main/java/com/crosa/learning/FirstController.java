@@ -17,4 +17,9 @@ public class FirstController {
     public String post(@RequestBody String message){
         return "Successful POST request. The message is: " + message;
     }
+
+    @PostMapping("/post-order")
+    public String post(@RequestBody Order order){
+        return "Request successful. The order is: " + order.toString();
+    }
 } // End FirstController
