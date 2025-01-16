@@ -22,4 +22,10 @@ public class FirstController {
     public String post(@RequestBody Order order){
         return "Request successful. The order is: " + order.toString();
     }
+
+    @PostMapping("/post-order-record")
+    public String postRecord(@RequestBody OrderRecord order){
+        return "Request successful. The order is: " + order.toString();
+    }
+
 } // End FirstController
