@@ -114,5 +114,10 @@
 
 <p>By default when you call toString() method on an object in Java, it returns the object reference - a hash code. Of course, we can choose to override the default toString method if we want a different result.</p>
 
+<p>In addition to the toString() method being in a default state, our objects are private with no accessors. By changing these, we can allow the JSON post to map to the objects. I have swapped to Postman to help visualize the state of the objects after the request. </p>
 
+<img width="825" alt="Screenshot 2025-01-15 at 9 13 03 PM" src="https://github.com/user-attachments/assets/f7d93532-27ae-4eab-87fb-8c26e5dbf939" />
+<img width="290" alt="Screenshot 2025-01-15 at 9 13 51 PM" src="https://github.com/user-attachments/assets/9e9e6c34-d376-4511-a8cd-fb6f385c655c" />
+<img width="457" alt="Screenshot 2025-01-15 at 9 15 49 PM" src="https://github.com/user-attachments/assets/998a15bb-e678-4c96-ae7d-a4ab86e3a18a" />
+<img width="788" alt="Screenshot 2025-01-15 at 9 16 42 PM" src="https://github.com/user-attachments/assets/d4f0141b-ffd2-446d-8cb1-ff48ffb7d2fd" />
 
