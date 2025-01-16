@@ -131,5 +131,10 @@
 <img width="287" alt="Screenshot 2025-01-15 at 9 46 00 PM" src="https://github.com/user-attachments/assets/90bb8820-e999-4d44-acac-aa710a9e073b" />
 <img width="768" alt="Screenshot 2025-01-15 at 9 46 03 PM" src="https://github.com/user-attachments/assets/d28ae4b6-c7ee-41e1-a9c6-7684c7cd3358" />
 
+<h1>Java Records</h1>
+<p>As stated previously, Java Records provide a lot of heavy lifting out of the box. In this case we create a new record, an endpoint for it, and then we send an http request.</p>
 
+<img width="433" alt="Screenshot 2025-01-15 at 10 10 44 PM" src="https://github.com/user-attachments/assets/a277ff47-6475-4eb5-8c61-39adf6e72ca2" />
+
+<p>The request is the same as previous ones, with the object names needing to match the request.</p>
 
