@@ -121,3 +121,6 @@
 <img width="457" alt="Screenshot 2025-01-15 at 9 15 49 PM" src="https://github.com/user-attachments/assets/998a15bb-e678-4c96-ae7d-a4ab86e3a18a" />
 <img width="788" alt="Screenshot 2025-01-15 at 9 16 42 PM" src="https://github.com/user-attachments/assets/d4f0141b-ffd2-446d-8cb1-ff48ffb7d2fd" />
 
+<h2>Getters and Setters vs Records</h3>
+<p>Java records were introduced to provide similar functionality with minimal boilerplate. A Java record essentially automatically generates the getter methods, toString, equals, hashCode, and constructor. </p>
+<p>Traditional methods have benefits over records, such as being mutable, and enabling further/deeper custom logic and behavior.</p>
