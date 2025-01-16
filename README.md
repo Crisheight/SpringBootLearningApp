@@ -124,3 +124,12 @@
 <h2>Getters and Setters vs Records</h3>
 <p>Java records were introduced to provide similar functionality with minimal boilerplate. A Java record essentially automatically generates the getter methods, toString, equals, hashCode, and constructor. </p>
 <p>Traditional methods have benefits over records, such as being mutable, and enabling further/deeper custom logic and behavior.</p>
+
+<p>By using the JsonProperty annotation, we can individually name Java objects as needed, but the HTTP request must mirror those changes in order to be successful (they must match and are case sensitive).</p>
+
+<img width="341" alt="Screenshot 2025-01-15 at 9 45 53 PM" src="https://github.com/user-attachments/assets/86df5471-ab83-46ae-98d6-a1060c074327" />
+<img width="287" alt="Screenshot 2025-01-15 at 9 46 00 PM" src="https://github.com/user-attachments/assets/90bb8820-e999-4d44-acac-aa710a9e073b" />
+<img width="768" alt="Screenshot 2025-01-15 at 9 46 03 PM" src="https://github.com/user-attachments/assets/d28ae4b6-c7ee-41e1-a9c6-7684c7cd3358" />
+
+
+
