@@ -4,15 +4,14 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class FirstController {
+    private final StudentRepository studentRepository;
 
-    @GetMapping("/greetings")
-    public String sayGreeting() {
-        return "Hello from the GET request";
+    public FirstController(StudentRepository studentRepository) {
+        this.studentRepository = studentRepository;
     }
 
-    @PostMapping("/post")
-    public String post(@RequestBody String message){
-        return "Successful POST request. The message is: " + message;
+    @PostMapping("/students")
+    public Student post(@RequestBody Student student) {
+        return studentRepository.save(student);
     }
-
 } // End FirstController
