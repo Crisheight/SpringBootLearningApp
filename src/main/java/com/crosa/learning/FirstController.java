@@ -1,5 +1,6 @@
 package com.crosa.learning;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -28,5 +29,13 @@ public class FirstController {
     ) {
         return studentRepository.findById(id)
                 .orElse(new Student());
+    }
+
+    @DeleteMapping("/students/{student-id}")
+    @ResponseStatus(HttpStatus.OK)
+    public void deleteStudentById(
+            @PathVariable("student-id") Integer id
+    ) {
+        studentRepository.deleteById(id);
     }
 } // End FirstController
