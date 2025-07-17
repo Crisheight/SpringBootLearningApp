@@ -23,6 +23,12 @@ public class Student {
     )
     private StudentProfile studentProfile;
 
+    @ManyToOne
+    @JoinColumn(
+            name = "school_id"
+    )
+    private School school;
+
     public Student() {
     }
 
@@ -71,5 +77,21 @@ public class Student {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public StudentProfile getStudentProfile() {
+        return studentProfile;
+    }
+
+    public void setStudentProfile(StudentProfile studentProfile) {
+        this.studentProfile = studentProfile;
+    }
+
+    public School getSchool() {
+        return school;
+    }
+
+    public void setSchool(School school) {
+        this.school = school;
     }
 }
