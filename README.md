@@ -173,5 +173,7 @@
 
 <p>By introducing a mapper, we will be able to implement DTO patterns. For example, we can have multiple representations for one object. That is to say, for a Student object we might have one representation that only exposes a first and last name, while a second representation exposes or receives data to create a new student object. By combining this ability with CRUD operations, we can appropriately obfuscate information on a need-to-know basis.</p>
 
+<p>In short, DTO's provide data separation,an abstraction layer, and flexibility all while improving performance.</p>
+
 
 
