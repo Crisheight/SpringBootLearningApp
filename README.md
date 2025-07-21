@@ -138,3 +138,38 @@
 
 <p>The request is the same as previous ones, with the object names needing to match the request.</p>
 
+<h1>Database and CRUD Operations</h1>
+
+<p>By leveraging a databse, Postgres in this case, we can begin to implement relationships in the codebase, which let's us leverage these relationships by using CRUD operations - create, read, update, and delete.</p>
+
+<p>Using Spring, we are able to use annotations in the code to specify primary and secondary relationships, keys, etc. -> It abstracts the raw SQL commands for us, although you should keep them toggled on in the logger (when the program is run) to determine if commands are incorrect or can be optimized.</p>
+
+<p>Tools can be equally important when working with complex data across a project. In this way, intelliJ IDE provides various ways to see the actions you are doing, both visually and typed.</p>
+
+<p>Database:</p>
+
+<img width="415" height="599" alt="Screenshot 2025-07-21 at 5 12 03 PM" src="https://github.com/user-attachments/assets/69eb72ab-5bd7-4a09-874c-51b7b9bbf7ef" />
+<img width="405" height="137" alt="Screenshot 2025-07-21 at 5 12 15 PM" src="https://github.com/user-attachments/assets/1c4fa927-7ff9-4006-bfa6-c7b491693b37" />
+<img width="880" height="156" alt="Screenshot 2025-07-21 at 5 12 24 PM" src="https://github.com/user-attachments/assets/d4d71b54-2df9-4207-99b7-ef6f71a2f965" />
+
+<p>CRUD Operations:</p>
+
+<img width="630" height="611" alt="Screenshot 2025-07-21 at 5 10 53 PM" src="https://github.com/user-attachments/assets/5d33a612-bd42-4a2f-8023-5d0ac7388958" />
+<img width="508" height="652" alt="Screenshot 2025-07-21 at 5 11 01 PM" src="https://github.com/user-attachments/assets/6d7c7a26-7eb0-44c2-9f3b-66003be5ac5c" />
+<img width="500" height="583" alt="Screenshot 2025-07-21 at 5 11 07 PM" src="https://github.com/user-attachments/assets/8aa1ffb5-96b2-4802-b858-0cd214fe5f4a" />
+<img width="365" height="108" alt="Screenshot 2025-07-21 at 5 11 17 PM" src="https://github.com/user-attachments/assets/18f6fb37-4088-43f9-8cc7-e74d47f7f12e" />
+<img width="549" height="472" alt="Screenshot 2025-07-21 at 5 11 30 PM" src="https://github.com/user-attachments/assets/90c445ef-b10f-406d-9eac-4be498b4e7fb" />
+<img width="852" height="406" alt="Screenshot 2025-07-21 at 5 20 36 PM" src="https://github.com/user-attachments/assets/263c46f0-b10c-4a1d-b323-6eb02193fdf1" />
+
+<p>The database contents consists of a one-to-one relationship, and a one-to-many relationship</p>
+
+<p>Using Spring annotations comes with its quirks: We needed to specify that School was a "JsonManagedReference" as the parent, so that when a list of Student objects were called by the database with a GET request, that the individual student objects returned didn't continually try to serialize the School. This circumvents an infinite loop of requests that would otherwise happen.</p>
+
+<h1>DTO Pattern</h1>
+
+<p>Previous we were using an older and more conventionally taught OOP- object-oriented programming- style that becomes unweildy as we begin to handle more complex data and relationships. For instance, as we add additional things into the database, we might need to start adding many more inputs for each Studen object GET request. This can create easy mistakes over time as the data becomes more coupled and the process becomes more complex.</p>
+
+<p>Enter DTO- data transfer object- pattern, which is a software design pattern meant to encapsulate and structure data that needs to be transferred between different parts of the system, or different systems entirely. DTO can also be used to help us hide sensitive information that the user or others do not need to view. In our case, we can hide the Student's PII- personally identififiable information- in ways that we could not before.</p>
+
+
+
