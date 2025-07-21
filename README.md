@@ -171,7 +171,7 @@
 
 <p>Enter DTO- data transfer object- pattern, which is a software design pattern meant to encapsulate and structure data that needs to be transferred between different parts of the system, or different systems entirely. DTO can also be used to help us hide sensitive information that the user or others do not need to view. In our case, we can hide the Student's PII- personally identififiable information- in ways that we could not before.</p>
 
-<p>By introducing a mapper, we will be able to implement DTO patterns. For example, we can have multiple representations for one object. That is to say, for a Student object we might have one representation that only exposes a first and last name, while a second representation exposes or receives data to create a new student object.</p>
+<p>By introducing a mapper, we will be able to implement DTO patterns. For example, we can have multiple representations for one object. That is to say, for a Student object we might have one representation that only exposes a first and last name, while a second representation exposes or receives data to create a new student object. By combining this ability with CRUD operations, we can appropriately obfuscate information on a need-to-know basis.</p>
 
 
 
