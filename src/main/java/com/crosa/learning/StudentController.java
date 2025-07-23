@@ -9,13 +9,30 @@ import java.util.List;
 public class StudentController {
     private final StudentRepository studentRepository;
 
-    public StudentController(StudentRepository studentRepository) {
+    private Student toStudent(StudentDto dto) {
+        var student = new Student();
+
+        student.setFirstName(dto.firstName());
+        student.setLastName(dto.lastName());
+        student.setEmail(dto.email());
+
+        var school = new School();
+        school.setId(dto.schoolId());
+
+        student.setSchool(school);
+
+        return student;
+    }
+
+    public StudentController(StudentRepository studentRepository
+    ) {
         this.studentRepository = studentRepository;
     }
 
     @PostMapping("/students")
-    public Student post(@RequestBody Student student) {
-        return studentRepository.save(student);
+    public Student post(@RequestBody StudentDto studentAsDto
+    ) {
+        return studentRepository.save(toStudent(studentAsDto));
     }
 
     @GetMapping("/students")
