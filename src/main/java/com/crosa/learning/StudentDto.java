@@ -1,4 +1,9 @@
 package com.crosa.learning;
 
-public record StudentDto() {
+public record StudentDto(
+        String firstName,
+        String lastName,
+        String email,
+        Integer schoolId
+) {
 }
