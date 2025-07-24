@@ -1,9 +1,6 @@
 package com.crosa.learning;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -11,21 +8,38 @@ import java.util.List;
 public class SchoolController {
     private final SchoolRepository schoolRepository;
 
+    private School toSchool(SchoolDto dto) {
+        return new School(
+                dto.name()
+        );
+    }
+
     public SchoolController(SchoolRepository schoolRepository) {
         this.schoolRepository = schoolRepository;
     }
 
 
     @PostMapping("/schools")
-    public School create(
-            @RequestBody School school
+    public SchoolDto create(
+            @RequestBody SchoolDto dto
             ) {
-        return schoolRepository.save(school);
+        var school = toSchool(dto);
+        schoolRepository.save(school);
+
+        return dto;
     }
+
 
     @GetMapping("/schools")
     public List<School> findAll() {
         return schoolRepository.findAll();
+    }
+
+    @DeleteMapping("/schools/{school-id}")
+    public void deleteById(
+            @PathVariable("school-id") Integer id
+            ) {
+        schoolRepository.deleteById(id);
     }
 
 }
