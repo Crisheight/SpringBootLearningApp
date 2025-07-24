@@ -38,9 +38,9 @@ public class StudentController {
     }
 
     @PostMapping("/students")
-    public StudentResponseDTO post(@RequestBody StudentDto studentAsDto
+    public StudentResponseDTO post(@RequestBody StudentDto dto
     ) {
-        var student = toStudent(studentAsDto);
+        var student = toStudent(dto);
         var savedStudent = studentRepository.save(student);
 
         return toStudentResponseDTO(savedStudent);
