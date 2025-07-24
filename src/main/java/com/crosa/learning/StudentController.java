@@ -24,15 +24,26 @@ public class StudentController {
         return student;
     }
 
+    private StudentResponseDTO toStudentResponseDTO(Student student) {
+        return new StudentResponseDTO(
+                student.getFirstName(),
+                student.getLastName(),
+                student.getEmail()
+        );
+    }
+
     public StudentController(StudentRepository studentRepository
     ) {
         this.studentRepository = studentRepository;
     }
 
     @PostMapping("/students")
-    public Student post(@RequestBody StudentDto studentAsDto
+    public StudentResponseDTO post(@RequestBody StudentDto studentAsDto
     ) {
-        return studentRepository.save(toStudent(studentAsDto));
+        var student = toStudent(studentAsDto);
+        var savedStudent = studentRepository.save(student);
+
+        return toStudentResponseDTO(savedStudent);
     }
 
     @GetMapping("/students")
