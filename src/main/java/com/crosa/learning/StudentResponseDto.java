@@ -1,6 +1,6 @@
 package com.crosa.learning;
 
-public record StudentResponseDTO(
+public record StudentResponseDto(
         String firstName,
         String lastName,
         String email
