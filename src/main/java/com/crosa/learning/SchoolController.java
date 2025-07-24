@@ -3,6 +3,7 @@ package com.crosa.learning;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 public class SchoolController {
@@ -11,6 +12,12 @@ public class SchoolController {
     private School toSchool(SchoolDto dto) {
         return new School(
                 dto.name()
+        );
+    }
+
+    private SchoolDto toSchoolDto(School school) {
+        return new SchoolDto(
+                school.getName()
         );
     }
 
@@ -31,8 +38,11 @@ public class SchoolController {
 
 
     @GetMapping("/schools")
-    public List<School> findAll() {
-        return schoolRepository.findAll();
+    public List<SchoolDto> findAll() {
+        return schoolRepository.findAll()
+                .stream()
+                .map(this::toSchoolDto)
+                .collect(Collectors.toList());
     }
 
     @DeleteMapping("/schools/{school-id}")
