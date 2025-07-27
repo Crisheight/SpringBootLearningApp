@@ -22,20 +22,23 @@ public class StudentService {
         return studentMapper.toStudentResponseDto(savedStudent);
     }
 
-    public List<Student> findAllStudents() {
-        return studentRepository.findAll();
-    }
-
-    public Student findStudentById(Integer id) {
-        return studentRepository.findById(id)
-                .orElse(new Student());
-    }
-
-    public List<Student> findStudentByName(String name) {
+    public List<StudentResponseDto> findAllStudents() {
         return studentRepository.findAll()
                 .stream()
-                .filter(student -> student.getFirstName().equalsIgnoreCase(name) ||
-                                   student.getLastName().equalsIgnoreCase(name))
+                .map(studentMapper::toStudentResponseDto)
+                .toList();
+    }
+
+    public StudentResponseDto findStudentById(Integer id) {
+        return studentRepository.findById(id)
+                .map(studentMapper::toStudentResponseDto)
+                .orElse(null);
+    }
+
+    public List<StudentResponseDto> findStudentByFirstName(String name) {
+        return studentRepository.findAllByFirstNameContaining(name)
+                .stream()
+                .map(studentMapper::toStudentResponseDto)
                 .toList();
     }
 
