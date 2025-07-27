@@ -1,4 +1,4 @@
-package com.crosa.learning;
+package com.crosa.learning.student;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

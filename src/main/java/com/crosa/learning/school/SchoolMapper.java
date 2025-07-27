@@ -1,4 +1,4 @@
-package com.crosa.learning;
+package com.crosa.learning.school;
 
 import org.springframework.stereotype.Service;
 

@@ -1,5 +1,6 @@
-package com.crosa.learning;
+package com.crosa.learning.student;
 
+import com.crosa.learning.school.School;
 import org.springframework.stereotype.Service;
 
 @Service

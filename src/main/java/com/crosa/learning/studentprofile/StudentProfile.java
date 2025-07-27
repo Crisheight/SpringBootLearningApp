@@ -1,5 +1,6 @@
-package com.crosa.learning;
+package com.crosa.learning.studentprofile;
 
+import com.crosa.learning.student.Student;
 import jakarta.persistence.*;
 
 @Entity

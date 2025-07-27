@@ -1,4 +1,4 @@
-package com.crosa.learning;
+package com.crosa.learning.student;
 
 public record StudentResponseDto(
         String firstName,
