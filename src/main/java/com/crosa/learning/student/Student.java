@@ -1,5 +1,7 @@
-package com.crosa.learning;
+package com.crosa.learning.student;
 
+import com.crosa.learning.school.School;
+import com.crosa.learning.studentprofile.StudentProfile;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 

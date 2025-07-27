@@ -1,7 +1,12 @@
-package com.crosa.learning;
+package com.crosa.learning.school;
 
+import com.crosa.learning.student.Student;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.CascadeType;
 
 import java.util.List;
 
