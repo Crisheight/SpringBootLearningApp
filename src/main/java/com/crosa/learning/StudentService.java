@@ -31,7 +31,15 @@ public class StudentService {
                 .orElse(new Student());
     }
 
-    public void deleteStudentById(Integer id) {
+    public List<Student> findStudentByName(String name) {
+        return studentRepository.findAll()
+                .stream()
+                .filter(student -> student.getFirstName().equalsIgnoreCase(name) ||
+                                   student.getLastName().equalsIgnoreCase(name))
+                .toList();
+    }
+
+    public void delete(Integer id) {
         studentRepository.deleteById(id);
     }
 } // End StudentService
