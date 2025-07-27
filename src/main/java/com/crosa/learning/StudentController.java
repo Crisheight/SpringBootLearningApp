@@ -4,7 +4,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 public class StudentController {
@@ -33,22 +32,18 @@ public class StudentController {
         return studentService.findStudentById(id);
     }
 
-    @GetMapping("/students/search/{student-name")
+    @GetMapping("/students/search/{student-name}")
     public List<Student> findStudentByName(
             @PathVariable("student-name") String name
     ) {
-        return studentService.findAllStudents()
-                .stream()
-                .filter(student -> student.getFirstName().equalsIgnoreCase(name) ||
-                                   student.getLastName().equalsIgnoreCase(name))
-                .toList();
+        return studentService.findStudentByName(name);
     }
 
     @DeleteMapping("/students/{student-id}")
     @ResponseStatus(HttpStatus.OK)
-    public void deleteStudentById(
+    public void delete(
             @PathVariable("student-id") Integer id
     ) {
-        studentService.deleteStudentById(id);
+        studentService.delete(id);
     }
 } // End FirstController
