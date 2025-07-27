@@ -17,13 +17,13 @@ public class SchoolService {
 
     public SchoolDto create(SchoolDto dto) {
         var school = schoolMapper.toSchool(dto);
-        return schoolRepository.save(school);
+        return schoolMapper.toSchoolDto(schoolRepository.save(school));
     }
 
     public List<SchoolDto> findAll() {
         return schoolRepository.findAll()
                 .stream()
-                .map(school -> new SchoolDto(school.getName()))
+                .map(schoolMapper::toSchoolDto)
                 .collect(Collectors.toList());
     }
 
