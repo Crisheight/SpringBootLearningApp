@@ -7,22 +7,10 @@ import java.util.stream.Collectors;
 
 @RestController
 public class SchoolController {
-    private final SchoolRepository schoolRepository;
+    private final SchoolService schoolService;
 
-    private School toSchool(SchoolDto dto) {
-        return new School(
-                dto.name()
-        );
-    }
-
-    private SchoolDto toSchoolDto(School school) {
-        return new SchoolDto(
-                school.getName()
-        );
-    }
-
-    public SchoolController(SchoolRepository schoolRepository) {
-        this.schoolRepository = schoolRepository;
+    public SchoolController(SchoolService schoolService) {
+        this.schoolService = schoolService;
     }
 
 
@@ -30,10 +18,7 @@ public class SchoolController {
     public SchoolDto create(
             @RequestBody SchoolDto dto
             ) {
-        var school = toSchool(dto);
-        schoolRepository.save(school);
-
-        return dto;
+        return schoolService.create(dto);
     }
 
 
