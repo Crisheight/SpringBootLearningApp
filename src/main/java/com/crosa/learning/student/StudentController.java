@@ -1,8 +1,12 @@
 package com.crosa.learning.student;
 
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
 
 @RestController
@@ -15,7 +19,8 @@ public class StudentController {
     }
 
     @PostMapping("/students")
-    public StudentResponseDto saveStudent(@RequestBody StudentDto dto
+    public StudentResponseDto saveStudent(
+            @Valid @RequestBody StudentDto dto
     ) {
         return this.studentService.saveStudent(dto);
     }
@@ -45,5 +50,16 @@ public class StudentController {
             @PathVariable("student-id") Integer id
     ) {
         studentService.delete(id);
+    }
+
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public ResponseEntity<?> handleMethodArgumentNotValidException(
+            MethodArgumentNotValidException ex
+    ) {
+        var errors = new HashMap<String, String>();
+        ex.getBindingResult().getFieldErrors()
+                .forEach(error -> errors.put(error.getField(), error.getDefaultMessage())
+                );
+        return ResponseEntity.badRequest().body(errors);
     }
 } // End FirstController
