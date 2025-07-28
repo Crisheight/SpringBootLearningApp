@@ -3,10 +3,10 @@ package com.crosa.learning.student;
 import jakarta.validation.constraints.NotEmpty;
 
 public record StudentDto(
-        @NotEmpty
+        @NotEmpty(message = "First name should not be null or empty")
         String firstName,
 
-        @NotEmpty
+        @NotEmpty(message = "Last name should not be null or empty")
         String lastName,
 
         String email,
