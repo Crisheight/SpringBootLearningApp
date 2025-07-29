@@ -3,8 +3,7 @@ package com.crosa.learning.student;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 class StudentMapperTest {
 
@@ -31,7 +30,14 @@ class StudentMapperTest {
 
         assertNotNull(student.getSchool());
         assertEquals(dto.schoolId(), student.getSchool().getId());
-
     }
+
+    @Test
+    public void throw_null_pointer_exception_if_dto_is_null() {
+        var exp = assertThrows(NullPointerException.class, () -> studentMapper.toStudent(null));
+        assertEquals("Student dto cannot be null", exp.getMessage());
+    }
+
+
 } // End StudentMapperTest
 
