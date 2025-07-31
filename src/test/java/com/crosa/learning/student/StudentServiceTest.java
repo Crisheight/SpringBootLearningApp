@@ -103,6 +103,8 @@ class StudentServiceTest {
         List<StudentResponseDto> studentResponseDtos = studentService.findAllStudents();
 
         assertEquals(students.size(), studentResponseDtos.size());
+        verify(studentRepository, times(1))
+                .findAll();
     }
 
 } // End StudentServiceTest
