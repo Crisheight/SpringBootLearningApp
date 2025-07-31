@@ -26,7 +26,7 @@ class StudentServiceTest {
     }
 
     @Test
-    public void saveStudent_shouldReturnSavedStudentResponseDto() {
+    public void saveStudent_shouldReturn_Saved_StudentResponseDto() {
         StudentDto dto = new StudentDto(
                 "John",
                 "Doe",
@@ -77,4 +77,9 @@ class StudentServiceTest {
         verify(studentMapper, times(1))
                 .toStudentResponseDto(savedStudent);
     }
+
+    @Test
+    public void findAllStudents_shouldReturn_ListOf_StudentResponseDto() {
+        Student student1 = new Student("John", "Doe", "
+
 } // End StudentServiceTest
