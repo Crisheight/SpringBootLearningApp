@@ -147,4 +147,49 @@ class StudentServiceTest {
         verify(studentMapper, times(1));
     }
 
+    @Test
+    public void findStudentByFirstName_shouldReturn_ListOf_StudentResponseDto() {
+        String firstName = "John";
+
+        List<Student> students = new ArrayList<>();
+        students.add(new Student(
+                "John",
+                "Doe",
+                "jd@mail.com",
+                20
+        ));
+
+        when(studentRepository.findAllByFirstNameContaining(firstName))
+                .thenReturn(students);
+        when(studentMapper.toStudentResponseDto(any(Student.class)))
+                .thenReturn(new StudentResponseDto(
+                        "John",
+                        "Doe",
+                        "jd@mail.com"
+                ));
+
+        var studentResponseDtos = studentService.findStudentByFirstName(firstName);
+
+        assertEquals(students.size(), studentResponseDtos.size());
+
+        assertEquals(students.get(0).getFirstName(), studentResponseDtos.get(0).firstName());
+
+        verify(studentRepository, times(1))
+                .findAllByFirstNameContaining(firstName);
+        verify(studentMapper, times(1))
+                .toStudentResponseDto(any(Student.class));
+    }
+
+    @Test
+    public void delete_shouldCallDeleteById() {
+        Integer studentId = 1;
+
+        doNothing().when(studentRepository).deleteById(studentId);
+
+        studentService.delete(studentId);
+
+        verify(studentRepository, times(1))
+                .deleteById(studentId);
+    }
+
 } // End StudentServiceTest
