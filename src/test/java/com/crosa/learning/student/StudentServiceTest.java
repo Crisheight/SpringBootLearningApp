@@ -69,5 +69,12 @@ class StudentServiceTest {
         assertEquals(dto.lastName(), studentResponseDto.lastName());
         assertEquals(dto.email(), studentResponseDto.email());
 
+
+        verify(studentMapper, times(1))
+                .toStudent(dto);
+        verify(studentRepository, times(1))
+                .save(student);
+        verify(studentMapper, times(1))
+                .toStudentResponseDto(savedStudent);
     }
 } // End StudentServiceTest
