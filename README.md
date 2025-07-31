@@ -175,5 +175,45 @@
 
 <p>In short, DTO's provide data separation,an abstraction layer, and flexibility all while improving performance.</p>
 
+<p>Applying DTO in the code lets us decouple the controller layer with a new service layer. This means that we can make changes to the service layer without changing code in the controller layer, something we couldn't do previously.</p>
 
+<p>New service layer in action</p>
 
+<img width="830" height="488" alt="Screenshot 2025-07-24 at 4 54 58 PM" src="https://github.com/user-attachments/assets/6bef5c0f-0101-4d96-9d64-6046333e287c" />
+
+<p>Controller layer gets simplified due to the service layer</p>
+
+<img width="561" height="199" alt="Screenshot 2025-07-24 at 4 55 46 PM" src="https://github.com/user-attachments/assets/2166fd8e-aa73-43d0-9c83-14009099d577" />
+<img width="634" height="123" alt="Screenshot 2025-07-24 at 4 57 10 PM" src="https://github.com/user-attachments/assets/ae2713fe-c764-4cd2-b5e8-b7bb28c38acc" />
+
+<h1>Project Layout</h1>
+
+<p>With the implementation of DTO we have decoupled the controller layer by adding a service layer. At this point the project should be better organized in case future work needs to be done with the classes we have made. By applying a by-feature style of organiztaion we can help readability and maintanability by ourselves and others.</p>
+
+<p>By-feature organization style</p>
+
+<img width="332" height="789" alt="Screenshot 2025-07-28 at 6 01 28 PM" src="https://github.com/user-attachments/assets/8f997b2d-b4d5-4953-b993-b10df6105154" />
+
+<h1>Tests</h1>
+
+<p>By adding guards in the code we can prevent errors. For instance, we can guard against null objects, and we can create tests to see not only if method calls are correct, but if they are being appropriately called singular or multiple times.</p>
+
+<p>Guarding against null</p>
+
+<img width="649" height="190" alt="Screenshot 2025-07-31 at 3 31 35 PM" src="https://github.com/user-attachments/assets/5c1cc272-0f21-4748-afca-e4986a45cf80" />
+
+<p>The POST request confirms the null guard is working and returns our message</p>
+
+<img width="647" height="144" alt="Screenshot 2025-07-28 at 6 36 22 PM" src="https://github.com/user-attachments/assets/250c254e-8229-4c58-a5cb-45b98a75af75" />
+
+<p>Tests involve injecting mock objects and methods in an independant manner separate from the rest of the other classes. We use Mockito to achieve this, which grants us annotations that provide clarity but also this functionality. For instance @BeforeEach will apply the code block before each method, while @AfterEach will apply the code block at the end of each method. Similarly there are annotations for singular useage, etc.</p>
+
+<p>Test with Mocks</p>
+
+<img width="700" height="822" alt="Screenshot 2025-07-31 at 3 17 14 PM" src="https://github.com/user-attachments/assets/269ba052-a76e-46f0-a1d8-717a1d0a5f2f" />
+
+<p>Mockito lets us assert that certain things are the same, such as the original object size should be the same as the new object size, and verify the number of calls.</p>
+
+<p>Assert and verify</p>
+
+<img width="822" height="722" alt="Screenshot 2025-07-31 at 3 17 26 PM" src="https://github.com/user-attachments/assets/6b40eb38-b315-4e9d-98cb-37d32200eeab" />
