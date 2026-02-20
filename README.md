@@ -1,4 +1,41 @@
-**This project is about learning to use SpringBoot and learning the annotations and opinionated style.**
+# SpringAttendanceAPI
+
+A high-performance, RESTful attendance management system built with Spring Boot. This service provides a robust backend for tracking attendance, managing student records, and ensuring data integrity through a strictly typed JPA persistence layer
+
+# Core Architecture
+
+The system is built on the Spring Framework, utilizing a tiered architecture to separate concerns and ensure scalability:
+
+* Controller Layer: Handles RESTful request mapping and provides standardized HTTP response codes (201 Created, 204 No Content, 404 Not Found) for a predictable API consumer experience
+
+* Service Layer: Encapsulates business logic, utilizing Spring Bean Dependency Injection (Constructor-based) for loose coupling and easier testing
+
+* Data Access Layer (JPA/Hibernate): Leverages Spring Data JPA for efficient interaction with relational databases, abstracting complex SQL queries into maintainable repository interfaces
+
+# Key Technical Implementations
+
+* Dependency Injection: Implements best-practice constructor injection to manage bean lifecycles, ensuring the system is modular and units remain testable
+
+* Automated Testing & Quality Assurance: Features a comprehensive test suite powered by JUnit 5 and Mockito
+
+* Unit Testing: Isolated service testing using mocks to verify business logic behavior
+
+* Verification: Utilizes Mockito to assert object states and verify interaction counts, ensuring critical paths (like database writes) are executed correctly
+
+* Persistence & Schema Management: Uses JPA annotations to define entity relationships, ensuring that the database schema remains synchronized with the Java object model
+
+# API Endpoints
+
+The API follows standard REST principles to manage resources:
+
+|Endpoint|Method|Description|
+|--------|------|-----------|
+|GET|/api/students|Retrieve a paginated list of all students|
+|GET|/api/students/{id}|Fetch detailed records for a specific student|
+|POST|/api/attendance|Log a new attendance record with validation|
+|GET|/api/attendance/{date}|Filter records by specific calendar dates|
+
+# Technical Visualizations
 
 <h1>SPRING BEANS & DEPENDENCY INJECTION</h1>
 
