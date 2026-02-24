@@ -1,4 +1,4 @@
-# SpringAttendanceAPI
+# Workforce Management API
 
 A high-performance, RESTful attendance management system built with Spring Boot. This service provides a robust backend for tracking attendance, managing student records, and ensuring data integrity through a strictly typed JPA persistence layer
 
