@@ -72,12 +72,6 @@ The API follows standard REST principles to manage resources:
 * 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 405 Method Not Allowed, 
 * 500 Internal Server Error, 503 Service Unavailable
 
-<h1>CODE RESET</h1>
-
-* Files and code removed
-* Preparation for building out Spring REST 
-* Renamed main application to ExampleApplication 
-
 <h1>SPRING REST</h1>
 
 * Use RestController annotation (combines @Controller and @ResponseBody) to prep the class
