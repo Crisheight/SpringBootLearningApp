@@ -1,4 +1,4 @@
-# Workforce Management API
+# Enterprise Workforce Management System
 
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
@@ -8,42 +8,80 @@
 ![Mockito](https://img.shields.io/badge/Mockito-8DCE8D?style=for-the-badge&logo=mockito&logoColor=white)
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)
 
-A high-performance, RESTful attendance management system built with Spring Boot. This service provides a robust backend for tracking attendance, managing student records, and ensuring data integrity through a strictly typed JPA persistence layer
+A high-performance, RESTful attendance management API built with Spring Boot. This system provides a reliable backend for tracking workforce attendance, managing student/employee records, and retrieving historical data with optimized data access.
 
-# Core Architecture
+## 🏗 Architecture
 
-The system is built on the Spring Framework, utilizing a tiered architecture to separate concerns and ensure scalability:
+The application follows a clean, standard 3-tier architecture to ensure separation of concerns and maintainability:
 
-* Controller Layer: Handles RESTful request mapping and provides standardized HTTP response codes (201 Created, 204 No Content, 404 Not Found) for a predictable API consumer experience
 
-* Service Layer: Encapsulates business logic, utilizing Spring Bean Dependency Injection (Constructor-based) for loose coupling and easier testing
+* **Controller Layer:** Handles incoming HTTP requests and routes them appropriately.
+* **Service Layer:** Contains the core business logic and transaction management.
+* **Data Access Layer:** Utilizes Spring Data JPA for seamless, secure interactions with the PostgreSQL database.
 
-* Data Access Layer (JPA/Hibernate): Leverages Spring Data JPA for efficient interaction with relational databases, abstracting complex SQL queries into maintainable repository interfaces
+## 🛠 Tech Stack
 
-# Key Technical Implementations
+* **Language:** Java
+* **Framework:** Spring Boot, Spring Data JPA
+* **Database:** PostgreSQL
+* **Build Tool:** Maven
+* **Testing:** JUnit 5, Mockito
 
-* Dependency Injection: Implements best-practice constructor injection to manage bean lifecycles, ensuring the system is modular and units remain testable
+## 📡 API Reference
 
-* Automated Testing & Quality Assurance: Features a comprehensive test suite powered by JUnit 5 and Mockito
+### Core Endpoints
 
-* Unit Testing: Isolated service testing using mocks to verify business logic behavior
+| Method | Endpoint | Description |
+| :--- | :--- | :--- |
+| `GET` | `/api/students` | Retrieves a list of all registered students/employees |
+| `GET` | `/api/students/{id}` | Fetch detailed records for a specific student |
+| `POST` | `/api/attendance` | Records a new attendance entry |
+| `GET` | `/api/attendance/{date}` | Fetches all attendance records for a specific date |
 
-* Verification: Utilizes Mockito to assert object states and verify interaction counts, ensuring critical paths (like database writes) are executed correctly
+## ⚙️ Local Development Setup
 
-* Persistence & Schema Management: Uses JPA annotations to define entity relationships, ensuring that the database schema remains synchronized with the Java object model
+**Prerequisites:**
+* Java Development Kit (JDK)
+* PostgreSQL running locally or via Docker
+* Maven
 
-# API Endpoints
+**Steps:**
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/criscoded/workforce-management-api.git](https://github.com/criscoded/workforce-management-api.git)
+    cd workforce-management-api
+    ```
 
-The API follows standard REST principles to manage resources:
+2.  **Configure the Database:**
+    Update the `src/main/resources/application.properties` file with your local PostgreSQL credentials:
+    ```properties
+    spring.datasource.url=jdbc:postgresql://localhost:5432/workforcedb
+    spring.datasource.username=your_username
+    spring.datasource.password=your_password
+    ```
 
-|Endpoint|Method|Description|
-|--------|------|-----------|
-|GET|/api/students|Retrieve a paginated list of all students|
-|GET|/api/students/{id}|Fetch detailed records for a specific student|
-|POST|/api/attendance|Log a new attendance record with validation|
-|GET|/api/attendance/{date}|Filter records by specific calendar dates|
+3.  **Build and Test:**
+    Run the comprehensive automated test suite to ensure everything is functioning correctly.
+    ```bash
+    mvn clean test
+    ```
 
-# Technical Visualizations
+4.  **Run the Application:**
+    ```bash
+    mvn spring-boot:run
+    ```
+
+## 🧪 Testing Strategy
+
+Quality is ensured through a comprehensive automated test suite. 
+* **JUnit 5** is used for unit and integration testing.
+* **Mockito** is utilized to mock dependencies in the service layer, isolating unit tests and ensuring fast execution.
+
+## 📝 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## Technical Visualizations
 
 <h1>SPRING BEANS & DEPENDENCY INJECTION</h1>
 
