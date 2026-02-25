@@ -1,5 +1,13 @@
 # Workforce Management API
 
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+![Maven](https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=Apache%20Maven&logoColor=white)
+![JUnit 5](https://img.shields.io/badge/JUnit5-25A162?style=for-the-badge&logo=junit5&logoColor=white)
+![Mockito](https://img.shields.io/badge/Mockito-8DCE8D?style=for-the-badge&logo=mockito&logoColor=white)
+![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)
+
 A high-performance, RESTful attendance management system built with Spring Boot. This service provides a robust backend for tracking attendance, managing student records, and ensuring data integrity through a strictly typed JPA persistence layer
 
 # Core Architecture
